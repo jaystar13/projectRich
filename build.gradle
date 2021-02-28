@@ -1,0 +1,56 @@
+buildscript {
+    ext {
+        springBootVersion = '2.2.4.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.9.RELEASE"
+    }
+}
+
+subprojects {
+    group 'com.jaystar'
+    version '1.0'
+
+    apply plugin: 'java'
+    apply plugin: 'org.springframework.boot'
+    apply plugin: 'io.spring.dependency-management'
+
+    sourceCompatibility = 1.8
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+        compile('org.projectlombok:lombok')
+    }
+
+    task hello {
+        doLast {
+            task -> println "I'm $task.project.name"
+        }
+    }
+}
+/*
+project(':module-api') {
+    dependencies {
+        compile project(':module-common')
+    }
+}
+*/
+project(':domains') {
+    dependencies {
+        //compile project(':module-common')
+    }
+}
+
+project(':domains:domain-rds') {
+    dependencies {
+        //compile project(':module-common')
+    }
+}

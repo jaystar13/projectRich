@@ -1,0 +1,4 @@
+# Project exclude paths
+/.gradle/
+/domains/domain-rds/build/
+/domains/domain-rds/build/classes/java/main/

@@ -1,0 +1,5 @@
+rootProject.name = 'projectRich'
+include 'domains'
+include 'domains:domain-rds'
+findProject(':domains:domain-rds')?.name = 'domain-rds'
+
