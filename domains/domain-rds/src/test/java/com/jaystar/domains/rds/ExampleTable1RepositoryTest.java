@@ -30,7 +30,7 @@ public class ExampleTable1RepositoryTest {
         double unitPrice = 14.51;
         int unitsInStock = 5;
         boolean discontinued = false;
-
+/*
         exampleTable1Repository.save(ExampleTable1.builder()
                 .productName(productName)
                 .quantityPerUnit(quantityPerUnit)
@@ -48,5 +48,6 @@ public class ExampleTable1RepositoryTest {
         assertThat(devExample.getQuantityPerUnit()).isEqualTo(quantityPerUnit);
         assertThat(devExample.getUnitPrice()).isEqualTo(unitPrice);
         assertThat(devExample.getUnitsInStock()).isEqualTo(unitsInStock);
+ */
     }
 }
